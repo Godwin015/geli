@@ -509,8 +509,9 @@
         </a>
 
         <a
-          href="#/contact"
+          href="#reach-us"
           data-nav="contact"
+          id="top-contact-link"
         >
           Contact
         </a>
@@ -6254,7 +6255,12 @@
             <p
               class="mt-2 text-xs leading-5 text-geli-grey"
             >
-              Service image placeholder
+              <img
+                    src="contractor.jpg"
+                    alt="Our Work"
+                    class="mx-auto h-auto w-full rounded-xl object-contain"
+                    loading="lazy"
+                  />
             </p>
 
           </div>
@@ -7619,9 +7625,13 @@
                 <!-- Placeholder Text -->
                 <p
                   class="mt-5 text-sm font-semibold leading-7 text-white/75 sm:text-base"
-                >
-                  [ INSERT HEADER IMAGE HERE, a wide shot of a GELI activity
-                  in progress. Indigo overlay. ]
+                >        
+                  <img
+                    src="our-work.jpg"
+                    alt="Our Work"
+                    class="mx-auto h-auto w-full rounded-xl object-contain"
+                    loading="lazy"
+                  />
                 </p>
 
               </div>
@@ -7903,8 +7913,12 @@
               <p
                 class="mt-6 text-sm font-semibold leading-7 text-white/80 sm:text-base"
               >
-                [ INSERT PROJECT COVER IMAGE HERE, the official
-                "GELI CATCH-UP LEARNING PROGRAMME" cover artwork. ]
+              <img
+                    src="Image_1.jpg"
+                    alt="Our Work"
+                    class="mx-auto h-auto w-full rounded-xl object-contain"
+                    loading="lazy"
+                  />
               </p>
 
             </div>
@@ -9186,7 +9200,7 @@
 
 
     <!-- Facilitator training visual -->
-    <div class="mx-auto mt-12 max-w-5xl">
+    <!-- <div class="mx-auto mt-12 max-w-5xl">
 
       <div
         class="flex min-h-[260px] items-center justify-center
@@ -9239,7 +9253,7 @@
 
       </div>
 
-    </div>
+    </div> -->
 
 
     <!-- Four-day training -->
@@ -10329,8 +10343,11 @@
           class="mt-5 text-sm font-semibold leading-7 sm:text-base"
           style="color: var(--geli-slate);"
         >
-          [ Insert map graphic here, Zamfara State with all fourteen LGAs
-          outlined; highlight the pilot locations in green once confirmed. ]
+        <img
+        src="map.png"
+        alt="zamfara map"
+        class="mx-auto h-auto w-full rounded-xl object-contain"
+        loading="lazy"/>
         </p>
 
       </div>
@@ -11611,7 +11628,10 @@
 
 
     <!-- Contact Details -->
-    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-[1fr_1fr]">
+    <div 
+    id="reach-us"
+    class="grid gap-10 md:grid-cols-2 lg:grid-cols-[1fr_1fr]"
+    >
 
       <div>
         <h3 class="text-sm font-bold uppercase tracking-[0.16em] text-geli-green">
@@ -12182,8 +12202,36 @@
     // --------------------------------------------
 
     handleRoute();
+
+    // --------------------------------------------
+    // Scroll top Contact button to footer Reach Us
+    // --------------------------------------------
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+      const topContactLink = document.getElementById('top-contact-link');
+
+      if (topContactLink) {
+
+        topContactLink.addEventListener('click', function (event) {
+
+          event.preventDefault();
+
+          const reachUs = document.getElementById('reach-us');
+
+          if (reachUs) {
+            reachUs.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+
+        });
+
+      }
+
+    });
   </script>
 
 </body>
 </html>
-
