@@ -11050,13 +11050,20 @@
 
       <div class="max-w-4xl">
 
-        <span
-          class="mb-5 inline-flex items-center rounded-full
-                 border border-white/30 bg-white/10
-                 px-4 py-2 text-sm font-bold tracking-wide"
-        >
-        Contact
-        </span>
+        <button
+  type="button"
+  id="contact-hero-button"
+  class="mb-5 inline-flex items-center rounded-full
+         border border-white/30 bg-white/10
+         px-4 py-2 text-sm font-bold tracking-wide
+         text-white transition duration-300
+         hover:bg-white hover:text-geli-indigo
+         focus:outline-none focus:ring-2
+         focus:ring-white focus:ring-offset-2
+         focus:ring-offset-geli-indigo"
+>
+  Contact
+</button>
 
         <h1
           class="text-4xl font-black leading-tight
@@ -12204,32 +12211,39 @@
     handleRoute();
 
     // --------------------------------------------
-    // Scroll top Contact button to footer Reach Us
+    // Contact buttons → footer Reach Us section
     // --------------------------------------------
-
+    
     document.addEventListener('DOMContentLoaded', function () {
-
+    
       const topContactLink = document.getElementById('top-contact-link');
-
-      if (topContactLink) {
-
-        topContactLink.addEventListener('click', function (event) {
-
-          event.preventDefault();
-
-          const reachUs = document.getElementById('reach-us');
-
-          if (reachUs) {
-            reachUs.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-
-        });
-
+      const contactHeroButton = document.getElementById('contact-hero-button');
+    
+      function scrollToReachUs(event) {
+    
+        event.preventDefault();
+    
+        const reachUs = document.getElementById('reach-us');
+    
+        if (reachUs) {
+          reachUs.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+    
       }
-
+    
+      // Top navigation Contact link
+      if (topContactLink) {
+        topContactLink.addEventListener('click', scrollToReachUs);
+      }
+    
+      // Contact Hero button
+      if (contactHeroButton) {
+        contactHeroButton.addEventListener('click', scrollToReachUs);
+      }
+    
     });
   </script>
 
