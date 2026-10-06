@@ -517,6 +517,28 @@
         </a>
 
         <a
+          href="#/donate"
+          class="inline-flex items-center justify-center
+                 rounded-full
+                 bg-white
+                 px-7 py-3.5
+                 text-sm font-extrabold
+                 text-geli-indigo
+                 shadow-lg
+                 transition
+                 duration-200
+                 hover:-translate-y-0.5
+                 hover:bg-geli-green
+                 hover:text-geli-slate
+                 focus:outline-none
+                 focus:ring-4
+                 focus:ring-white/30"
+        >
+          <i class="fa-solid fa-heart mr-2" aria-hidden="true"></i>
+          Donate
+        </a>
+
+        <a
           class="btn btn-primary btn-sm"
           href="#/contact"
           style="color:#fff;border-bottom:0"
@@ -11463,6 +11485,148 @@
 </div>
 <!-- END SECTION 8 — CONTACT PAGE -->
 
+<!-- =========================================================
+     DONATE PAGE
+     ========================================================= -->
+<div id="page-donate" class="hidden">
+
+  <!-- Donate Hero -->
+  <section class="relative overflow-hidden bg-geli-indigo text-white">
+
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-geli-cyan/20 blur-3xl"></div>
+      <div class="absolute -right-20 top-20 h-72 w-72 rounded-full bg-geli-green/20 blur-3xl"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-7xl px-5 py-20 text-center sm:px-6 sm:py-24 lg:px-8">
+
+      <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-geli-green">
+        Support GELI
+      </p>
+
+      <h1 class="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
+        Donate to GELI
+      </h1>
+
+      <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
+        Your support can help strengthen grassroots programmes and contribute
+        to lasting impact in communities across Zamfara State.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- Donation Details -->
+  <section class="bg-geli-tint">
+
+    <div class="mx-auto max-w-4xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8">
+
+      <div class="rounded-3xl border border-geli-line bg-white p-7 shadow-xl sm:p-10">
+
+        <div class="text-center">
+
+          <div
+            class="mx-auto flex h-16 w-16 items-center justify-center
+                   rounded-2xl bg-geli-green/15 text-geli-dgreen"
+            aria-hidden="true"
+          >
+            <i class="fa-solid fa-hand-holding-heart text-2xl"></i>
+          </div>
+
+          <h2 class="mt-6 text-2xl font-black text-geli-slate sm:text-3xl">
+            Bank Transfer Details
+          </h2>
+
+          <p class="mt-3 text-sm leading-7 text-geli-grey">
+            You can support Grassroots Empowerment and Livelihood Initiative
+            through the bank account below.
+          </p>
+
+        </div>
+
+
+        <!-- Bank Details -->
+        <div class="mt-10 overflow-hidden rounded-2xl border border-geli-line">
+
+          <div class="grid gap-2 border-b border-geli-line bg-geli-tint px-5 py-5 sm:grid-cols-[180px_1fr] sm:items-center">
+            <span class="font-bold text-geli-slate">
+              Bank Name
+            </span>
+
+            <span class="font-semibold text-geli-ink">
+              Fidelity Bank
+            </span>
+          </div>
+
+
+          <div class="grid gap-2 border-b border-geli-line px-5 py-5 sm:grid-cols-[180px_1fr] sm:items-center">
+            <span class="font-bold text-geli-slate">
+              Account Name
+            </span>
+
+            <span class="font-semibold text-geli-ink">
+              Grassroots Empowerment and Livelihood Initiative
+            </span>
+          </div>
+
+
+          <div class="grid gap-2 bg-geli-tint px-5 py-5 sm:grid-cols-[180px_1fr] sm:items-center">
+            <span class="font-bold text-geli-slate">
+              Account No.
+            </span>
+
+            <span class="font-black tracking-wider text-geli-indigo">
+              5610184558
+            </span>
+          </div>
+
+        </div>
+
+
+        <!-- Important Note -->
+        <div class="mt-8 rounded-2xl border-l-4 border-geli-green bg-geli-green/10 p-5">
+
+          <p class="text-sm leading-7 text-geli-slate">
+            <strong>Thank you for supporting GELI.</strong>
+            Every contribution helps strengthen the organisation's ability
+            to serve communities and deliver meaningful grassroots impact.
+          </p>
+
+        </div>
+
+
+        <!-- Back Button -->
+        <div class="mt-10 flex justify-center">
+
+          <a
+            href="#/"
+            class="inline-flex min-h-12 items-center justify-center
+                   rounded-full bg-geli-indigo px-7 py-3
+                   text-sm font-extrabold text-white
+                   transition duration-200
+                   hover:-translate-y-0.5
+                   hover:bg-geli-slate
+                   focus:outline-none
+                   focus:ring-2 focus:ring-geli-indigo
+                   focus:ring-offset-2"
+          >
+            <i class="fa-solid fa-arrow-left mr-2" aria-hidden="true"></i>
+            Back to Homepage
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+<!-- END DONATE PAGE -->
+
 </main>
 
 
@@ -12046,7 +12210,8 @@
     whatWeDo: document.getElementById('page-what-we-do'),
     projects: document.getElementById('page-projects'),
     catchUp: document.getElementById('page-catch-up'),
-    contact: document.getElementById('page-contact')
+    contact: document.getElementById('page-contact'),
+    donate: document.getElementById('page-donate')
     };
 
     function showPage(pageName) {
@@ -12134,6 +12299,11 @@
     // Contact
     if (hash === '#/contact') {
         return 'contact';
+    }
+
+    // Donate
+    if (hash === '#/donate') {
+        return 'donate';
     }
 
     // Fallback
